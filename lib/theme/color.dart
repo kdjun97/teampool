@@ -1,0 +1,1 @@
+const appBarTextColor = 0xFF000000;
