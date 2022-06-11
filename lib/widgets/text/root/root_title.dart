@@ -14,6 +14,7 @@ class RootTitle extends StatelessWidget {
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: FontWeight.bold,
+          fontFamily: 'NotoSansKR'
         ),
         textAlign: TextAlign.center,
       )
