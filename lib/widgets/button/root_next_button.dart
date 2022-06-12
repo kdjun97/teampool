@@ -12,8 +12,8 @@ class RootNextButton extends StatelessWidget {
         onPressed: () {
           print("버튼");
         },
-        color: const Color(rootNextButtonColor),
-        textColor: const Color(arrowColor),
+        color: const Color(CustomColorTheme.rootNextButtonColor),
+        textColor: const Color(CustomColorTheme.arrowColor),
         child: const Icon(
           Icons.arrow_forward,
           size: 100,
