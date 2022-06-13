@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RootTitle extends StatelessWidget {
-  RootTitle({required this.height});
-  double fontSize = 60.0;
+  RootTitle({required this.height, required this.fontSize});
+  final double fontSize;
   final double height;
 
   @override

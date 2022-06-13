@@ -5,16 +5,18 @@ import 'package:teampool/theme/color.dart';
 // TODO : Text Size랑 padding 같은 위치 정보 잘 받아야함.
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    Key? key,
     this.showInfo = false,
     required this.width,
     required this.height,
+    required this.fontSize,
+    required this.paddingSize,
   });
 
   final bool showInfo; // 회원가입과 로그인을 보여줄 지 정해주는 bool 변수
   final double width;
   final double height;
-  final double fontSize = 20.0;
+  final double fontSize;
+  final double paddingSize;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +27,17 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: width * 2 / 10,
+            width: width * 1 / 10,
             height: height / 2,
             color: Colors.blue,
             margin: EdgeInsets.only(
               left: width * 0.5 / 10,
             ),
-            child: const Text("Logo"), // TODO : Logo Image 들어오기 (이미지 받아서 넣기)
+            child: Image.asset(
+              'assets/images/root_image.png',
+              width: 80,
+              fit: BoxFit.fill,
+            ), // TODO : Logo Image 들어오기 (이미지 받아서 넣기)
           ),
           Expanded(
             child: Container(),
@@ -42,7 +48,7 @@ class CustomAppBar extends StatelessWidget {
                     Container(
                       height: height / 2,
                       color: Colors.blue,
-                      padding: const EdgeInsets.fromLTRB(40.0, 0, 40.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(paddingSize, 0, paddingSize, 0.0),
                       child: TextButton(
                         style: TextButton.styleFrom(
                           primary: const Color(CustomColorTheme.appBarTextColor),
@@ -64,7 +70,7 @@ class CustomAppBar extends StatelessWidget {
                     Container(
                       height: height / 2,
                       color: Colors.purple,
-                      padding: const EdgeInsets.fromLTRB(40.0, 0, 65.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(paddingSize, 0, paddingSize, 0.0),
                       child: TextButton(
                         style: TextButton.styleFrom(
                           primary: const Color(CustomColorTheme.appBarTextColor),
