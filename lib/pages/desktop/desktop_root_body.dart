@@ -21,7 +21,7 @@ class DesktopRootBody extends StatelessWidget {
             fontSize: h2,
             showInfo: true,
             width: Get.width,
-            height: Get.height * 0.5 / 10,
+            height: 60,
             paddingSize: appBarPaddingSize,
           ),
           RootTitle(
