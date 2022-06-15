@@ -8,8 +8,8 @@ class CustomAppBar extends StatelessWidget {
     this.showInfo = false,
     required this.width,
     required this.height,
-    required this.fontSize,
-    required this.paddingSize,
+    this.fontSize=0,
+    this.paddingSize=0,
   });
 
   final bool showInfo; // 회원가입과 로그인을 보여줄 지 정해주는 bool 변수
@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: const Color(CustomColorTheme.appBarBackgroundColor),
       width: width,
       height: height,
       child: Row(
