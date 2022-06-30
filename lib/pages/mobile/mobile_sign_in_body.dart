@@ -5,7 +5,7 @@ import 'package:teampool/widgets/text_field/custom_text_field.dart';
 
 import '../../controller/form_controller.dart';
 
-class DesktopSignInBody extends StatelessWidget {
+class MobileSignInBody extends StatelessWidget {
   FormController formController = Get.find<FormController>();
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class DesktopSignInBody extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width: Get.width * 3 / 10,
+                  width: Get.width * 7 / 10,
                   height: Get.height * 6.5 / 10,
                   // color: Colors.blue,
                   child: Column(
@@ -37,20 +37,19 @@ class DesktopSignInBody extends StatelessWidget {
                           ),
                         ),
                       ),
-                      CustomTextField(width: Get.width * 3 / 10, height: 49, controller: formController.emailController, hintText: "이메일", icon: Icons.email),
+                      CustomTextField(width: Get.width * 7 / 10, height: 49, controller: formController.emailController, hintText: "이메일", icon: Icons.email),
                       Text("d",),
                     ],
                   ),
                 ),
-                Expanded(child: Container(),),
-                Container(
-                  width: Get.width * 4 / 10,
-                  height: Get.height * 6.5 / 10,
-                  color: Colors.purple,
-                ),
               ],
             ),
-          )
+          ),
+          Container(
+            width: Get.width * 7 / 10,
+            height: Get.height * 6.5 / 10,
+            color: Colors.purple,
+          ),
         ],
       ),
     );
